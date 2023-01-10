@@ -20,9 +20,10 @@ struct ContentView: View {
                         .fontWeight(.semibold)
             }
             .foregroundColor(.white)
-            .padding()
-            .background(Color.red)
-            .cornerRadius(40)
+            .padding(40)
+          //  .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
+            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue, Color.yellow,Color.green]), startPoint: .top, endPoint: .bottom)) // Choose Start Point and End Point.and Also Any Colors you need.
+            .cornerRadius(70)
         }
     }
 }
