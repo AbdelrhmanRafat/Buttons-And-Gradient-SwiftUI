@@ -9,8 +9,18 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Button(action: {
+            print("Hello World")
+        }) {
+            Text("Hello World")
+                .background(Color.purple) // Change the background color to purple
+                .foregroundColor(.white)
+                // set font color to white
+                .font(.title)
+                // change the font type
+                .padding()
+            // Add the paddings with the primary color.
+        }
     }
 }
 
