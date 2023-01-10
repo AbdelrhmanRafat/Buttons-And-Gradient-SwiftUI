@@ -20,10 +20,11 @@ struct ContentView: View {
                         .fontWeight(.semibold)
             }
             .foregroundColor(.white)
-            .padding(40)
-          //  .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue]), startPoint: .leading, endPoint: .trailing))
-            .background(LinearGradient(gradient: Gradient(colors: [Color.red, Color.blue, Color.yellow,Color.green]), startPoint: .top, endPoint: .bottom)) // Choose Start Point and End Point.and Also Any Colors you need.
-            .cornerRadius(70)
+            .padding(20)
+            //Using Custom Color.
+            .background(LinearGradient(gradient: Gradient(colors: [Color("LightGreen"), Color("DarkGreen")]), startPoint: .leading, endPoint: .trailing))
+            .cornerRadius(40)
+            .shadow(color: .gray, radius: 20, x: 20, y: 20) // Adding Shadow to Button.
         }
     }
 }
