@@ -13,12 +13,13 @@ struct ContentView: View {
             print("Hello World")
         }) {
             Text("Hello World")
-                .foregroundColor(.purple)
-                // set font color to white
+                .fontWeight(.bold)
                 .font(.title)
-                // change the font type
-                .padding(20) // The More Padding Value More Border Perimeter Gets bigger..
-                .border(Color.purple, width: 5) // Border For Button.
+                .foregroundColor(.white)
+                .padding() // Set Padding For Set Background Color.
+                .background(Color.purple)
+                .padding(10)// Add More Padding to Add Border for the Button.
+                .border(Color.purple, width: 5)
         }
     }
 }
