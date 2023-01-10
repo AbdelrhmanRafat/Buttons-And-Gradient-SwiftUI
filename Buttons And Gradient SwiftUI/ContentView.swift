@@ -13,13 +13,12 @@ struct ContentView: View {
             print("Hello World")
         }) {
             Text("Hello World")
+                .padding() // Add Padding Before Background Color. The Modifiers order is very Important...
                 .background(Color.purple) // Change the background color to purple
                 .foregroundColor(.white)
                 // set font color to white
                 .font(.title)
                 // change the font type
-                .padding()
-            // Add the paddings with the primary color.
         }
     }
 }
