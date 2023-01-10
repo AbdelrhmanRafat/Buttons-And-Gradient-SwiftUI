@@ -18,8 +18,12 @@ struct ContentView: View {
                 .foregroundColor(.white)
                 .padding() // Set Padding For Set Background Color.
                 .background(Color.purple)
-                .padding(10)// Add More Padding to Add Border for the Button.
-                .border(Color.purple, width: 5)
+                .cornerRadius(40) // Corner Redius Modifier Comes After Background Color.
+                .padding(10) // Set more Padding to Add Rounded Rectangle in it.
+                .overlay(
+                RoundedRectangle(cornerRadius: 40)
+                    .stroke(Color.purple, lineWidth: 5)
+                )
         }
     }
 }
