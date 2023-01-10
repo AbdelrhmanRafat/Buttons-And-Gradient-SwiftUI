@@ -10,20 +10,14 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         Button(action: {
-            print("Hello World")
+            print("Delete Button Tapped")
         }) {
-            Text("Hello World")
-                .fontWeight(.bold)
-                .font(.title)
-                .foregroundColor(.white)
-                .padding() // Set Padding For Set Background Color.
-                .background(Color.purple)
-                .cornerRadius(40) // Corner Redius Modifier Comes After Background Color.
-                .padding(10) // Set more Padding to Add Rounded Rectangle in it.
-                .overlay(
-                RoundedRectangle(cornerRadius: 40)
-                    .stroke(Color.purple, lineWidth: 5)
-                )
+            Image(systemName: "trash")// Using SF Icon
+                .font(.largeTitle)// Can Use Text Modifiers with SF Icons.
+                .foregroundColor(.white) // Set Image Name.
+                .padding()// Set Padding To make Image be in the middle of background color
+                .background(Color.red)
+                .clipShape(Circle()) // Adding Clip Shape to Image.
         }
     }
 }
