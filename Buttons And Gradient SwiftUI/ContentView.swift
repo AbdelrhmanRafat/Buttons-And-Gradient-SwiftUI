@@ -10,9 +10,7 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack {
-            ButtonView(BtnTxt: "Share",icon: "square.and.arrow.up")
-            ButtonView(BtnTxt: "Edit",icon: "square.and.pencil")
-            ButtonView(BtnTxt: "Delete",icon: "trash")
+            ButtonView(BtnTxt: "", icon: "plus")
         }
     }
 }
@@ -30,15 +28,11 @@ struct ButtonView: View {
         Button(action: {
             print(BtnTxt + " Button Tapped")
         }) {
-            HStack {
-                icon.map({
+                 icon.map({
                     Image(systemName: $0)// Using SF Icon
                         .font(.title)// Can Use Text Modifiers with SF Icons.
                 })
-                Text(BtnTxt)
-                    .font(.title)
-                    .fontWeight(.semibold)
-            }
+            
         }
         .buttonStyle(GradientBackgroundStyle())
     }
@@ -46,15 +40,11 @@ struct ButtonView: View {
 // Adding Button Style Protocol.
 struct GradientBackgroundStyle : ButtonStyle {
     func makeBody(configuration: Configuration) -> some View {
-        configuration.label.frame(minWidth: 0, maxWidth: .infinity, alignment: .center)// Make Button width fill screen.
-         .foregroundColor(.white) // Color Button Text and image.
-        .padding() // Set Padding
-        //Using Custom Color.
-        .background(LinearGradient(gradient: Gradient(colors: [Color("LightGreen"), Color("DarkGreen")]), startPoint: .leading, endPoint: .trailing))
-        .cornerRadius(40)
-        .padding(.horizontal,20)
-        .shadow(color: .gray, radius: 20, x: 20, y: 20) // Adding Shadow to Button.
-         .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
-        //Adding Scale Effect for Button.
+        configuration.label.foregroundColor(.white)
+            .font(.largeTitle)
+            .padding(40)
+            .background(Color.purple)
+            .clipShape(Circle())
+            .rotationEffect(configuration.isPressed ? Angle(degrees: 45.0) : .zero) //Rotation Effect.
     }
 }
