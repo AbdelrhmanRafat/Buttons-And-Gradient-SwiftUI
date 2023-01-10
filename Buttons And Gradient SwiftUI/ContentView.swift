@@ -12,12 +12,17 @@ struct ContentView: View {
         Button(action: {
             print("Delete Button Tapped")
         }) {
-            Image(systemName: "trash")// Using SF Icon
-                .font(.largeTitle)// Can Use Text Modifiers with SF Icons.
-                .foregroundColor(.white) // Set Image Name.
-                .padding()// Set Padding To make Image be in the middle of background color
-                .background(Color.red)
-                .clipShape(Circle()) // Adding Clip Shape to Image.
+            HStack {
+                Image(systemName: "trash")// Using SF Icon
+                    .font(.title)// Can Use Text Modifiers with SF Icons.
+                    Text("Delete")
+                        .font(.title)
+                        .fontWeight(.semibold)
+            }
+            .foregroundColor(.white)
+            .padding()
+            .background(Color.red)
+            .cornerRadius(40)
         }
     }
 }
