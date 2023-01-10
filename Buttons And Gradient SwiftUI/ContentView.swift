@@ -54,5 +54,7 @@ struct GradientBackgroundStyle : ButtonStyle {
         .cornerRadius(40)
         .padding(.horizontal,20)
         .shadow(color: .gray, radius: 20, x: 20, y: 20) // Adding Shadow to Button.
+         .scaleEffect(configuration.isPressed ? 0.9 : 1.0)
+        //Adding Scale Effect for Button.
     }
 }
