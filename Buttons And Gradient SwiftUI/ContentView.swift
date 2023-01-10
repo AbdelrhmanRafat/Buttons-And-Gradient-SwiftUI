@@ -19,11 +19,13 @@ struct ContentView: View {
                         .font(.title)
                         .fontWeight(.semibold)
             }
+            .frame(minWidth: 0, maxWidth: .infinity, alignment: .center)
             .foregroundColor(.white)
-            .padding(20)
+            .padding()
             //Using Custom Color.
             .background(LinearGradient(gradient: Gradient(colors: [Color("LightGreen"), Color("DarkGreen")]), startPoint: .leading, endPoint: .trailing))
             .cornerRadius(40)
+            .padding(.horizontal,20)
             .shadow(color: .gray, radius: 20, x: 20, y: 20) // Adding Shadow to Button.
         }
     }
